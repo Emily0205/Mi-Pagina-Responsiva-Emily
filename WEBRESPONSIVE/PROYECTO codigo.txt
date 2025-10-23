@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Diseño Web Responsive </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    /* Tipografía base */
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 80%; /* base para móviles */
+      line-height: 1.5;
+      margin: 0; padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    h1 { font-size: 2em; margin-bottom: 0.5em; }
+    h2 { font-size: 1.4em; margin-bottom: 0.4em; }
+    p, ul {
+      font-size: 0.9em;
+      margin: 0 0 1em 0;
+      padding: 0 1em;
+    }
+    ul { list-style: disc inside; }
+
+    /* Layout adaptable */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* Grilla flexible para secciones */
+    .grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    /* Navegación mobile first */
+    nav ul {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      margin: 0 0 1em 0;
+      list-style: none;
+      background: #007BFF;
+    }
+    nav ul li {
+      border-bottom: 1px solid #0056b3;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      padding: 0.8em 1em;
+      font-weight: bold;
+    }
+    nav ul li a:hover {
+      background: #8905a3;
+    }
+
+    /* Imágenes fluidas */
+    img, video {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto 1em auto;
+    }
+
+    /* Media Queries para pantallas mayores */
+    @media (min-width: 640px) {
+      body { font-size: 90%; }
+
+      nav ul {
+        flex-direction: row;
+        background: none;
+      }
+      nav ul li {
+        border: none;
+      }
+      nav ul li a {
+        padding: 1em;
+        color: #007BFF;
+      }
+      nav ul li a:hover {
+        background: #e0e0e0;
+        color: #0056b3;
+      }
+
+      .grid {
+        flex-direction: column;
+      }
+    }
+
+    @media (min-width: 800px) {
+      body { font-size: 100%; }
+
+      .grid > section {
+        flex: 1;
+        padding: 0 1em;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      body { font-size: 120%; }
+    }
+  </style>
+</head>
+<body style="background-color: #eadded">
+  <header class="container">
+    <h1>Diseño Web Responsive</h1>
+    <nav>
+      <ul>
+        <li><a href="#PLANTEL">PLANTEL</a></li>
+        <li><a href="#EXTRACURRICULARES">EXTRACURRICULARES</a></li>
+        <li><a href="#AMIGOS">AMIGOS</a></li>
+        <li><a href="#MI GRUPO">MI GRUPO</a></li>
+        <li><a href="#MI FAMILIA">MI FAMILIA</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container grid">
+    <section id="PLANTEL">
+      <h2>PLANTEL</h2>
+      <p> MI ESCUELA ES CENTRO BACHLLERATO TECNOLOGICO INDUSTRIAL Y DE SERVICIOS 224.</p>
+      <img src="Imagenes/logocbtis.png" alt="Imagen no encontrada width="300" height="200">
+    </section>
+
+    <section id="EXTRACURRICULARES">
+      <h2>EXTRACURRICULARES</h2>
+      <p> Mi actividad extracurricular es fuera de la escuela,
+practico un arte marcial llegada de corea,
+esta deribado del Karate y del Tansudo,
+se llama Taekwondo. </p> 
+        <img src="Imagenes/tkd.jpg" alt="Imagen no encontrada" />
+    </section>
+
+    <section id="AMIGOS">
+      <h2>AMIGOS</h2>
+      <p> Entre mis amigos estan Magaña, Claritza, Karolina, Jaciel y Gerardo </p>
+       <img src="Imagenes/lobobbys.jpg" />
+       <p> Entre mis amigos estan Emiliano y Denisse</p>
+       <img src="Imagenes/amigos.jpg" />
+    </section>
+
+    <section id="MI GRUPO">
+      <h2>MI GRUPO</h2>
+      <p> No hay foto.</p>
+      <img src="Imagenes/grupo.jpg" />
+    </section>
+
+    <section id="MI FAMILIA">
+      <h2>MI FAMILIA</h2>
+      <p>Mi familia esta conformada por mi mama. mi papa y mi hermano menor.</p>
+      <img src="Imagenes/yo.JPG" alt="Imagen no encontrada" />
+      <img src="Imagenes/mama.JPG" alt="Imagen no encontrada" />
+      <img src="Imagenes/papa.JPG" alt="Imagen no encontrada" />
+      <img src="Imagenes/hermano.JPG" alt="Imagen no encontrada" />
+    </section>
+  </main>
+
+  <footer class="container" style="text-align:center; padding:1em 0; font-size:0.8em; color:#666;">
+   2025 Diseño Web Responsive - DIARTE HERALDEZ EMILY DANAY
+  </footer>
+</body>
+</html>
